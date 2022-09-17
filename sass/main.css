@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Staatliches", cursive;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+}
+.header .nav {
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  position: fixed;
+  z-index: 4;
+  /* &__menu:hover{
+      border: #ffffff solid 1px;
+  } */
+}
+.header .nav__logo {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+.header .nav__logo .nav__icon {
+  width: 50%;
+  height: 80%;
+}
+.header .nav__logo .nav__p {
+  color: red;
+  display: inline-block;
+}
+.header .nav__ul {
+  list-style: none;
+  position: fixed;
+  top: 8%;
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  z-index: 1;
+  transition: all 2s;
+}
+.header .nav__ul .nav__li .nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  display: inline-block;
+  position: relative;
+}
+.header .nav__ul .nav__li .nav__link::before {
+  content: " ";
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  background-color: blue;
+  transition: all 1s;
+}
+.header .nav__ul .nav__li .nav__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+.header .nav .nav__active {
+  transform: translateX(150%);
+  opacity: 0;
+}
+.header .nav__shopping {
+  margin-left: 90px;
+  position: relative;
+  width: 15%;
+  height: 90%;
+}
+.header .nav__shopping .nav__number {
+  color: #ffffff;
+  position: absolute;
+  left: 30px;
+  top: 5px;
+  background-color: #ff0000;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+.header .nav__shopping .nav__cart {
+  width: 100%;
+  height: 100%;
+}
+.header .nav__menu {
+  width: 15%;
+  height: 90%;
+  margin-right: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 2s;
+}
+.header .nav__menu .nav__tail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+  justify-content: flex-end;
+}
+.header .nav__menu .nav__tail .nav__span {
+  display: block;
+  width: 100%;
+  height: 10%;
+  background-color: #ff0000;
+}
+.header .nav__menu .nav__tail .nav__span--height {
+  width: 70%;
+  height: 10%;
+}
+.header .nav__menu .nav__tail .nav__span--low {
+  width: 40%;
+  height: 10%;
+}
+.header .carrusel {
+  width: 100%;
+  height: 92vh;
+}
+.header .carrusel__img1 {
+  width: 100%;
+  height: 100%;
+  background: url(../img/fondo-msi.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+.container__div {
+  width: 100%;
+  height: 60vh;
+  background: url(../img/fondo-notebook.jpg);
+  background-size: cover;
+  border: 1px solid #ffffff;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "imagen lista" "imagen lista" "precio lista" "boton lista";
+}
+.container__div .container__ul {
+  grid-area: lista;
+  color: #ffffff;
+  list-style: none;
+}
+.container__div .container__ul .container__li {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 5px;
+}
+.container__div .container__ul .container__li .container__logo {
+  width: 48px;
+  height: 50px;
+}
+.container__div .container__ul .container__li .container__span {
+  margin-left: 10px;
+  font-size: 13px;
+}
+.container__div .container__img {
+  grid-area: imagen;
+  width: 100%;
+  height: 100%;
+}
+.container__div .container__button {
+  grid-area: boton;
+  background: linear-gradient(to left, rgb(245, 14, 14), rgb(245, 245, 17));
+  border-radius: 20px;
+  padding: 10px 10px;
+  color: #000000;
+  cursor: pointer;
+}
+.container__div .container__p {
+  background: url(../img/logos/precios.png);
+  background-size: cover;
+  grid-area: precio;
+  font-size: 2rem;
+  padding: 40px 35px;
+}
+
+@media (min-width: 1024px) {
+  .header .nav__logo {
+    width: 10%;
+    height: 100%;
+  }
+  .header .nav__shopping {
+    position: relative;
+    left: 35%;
+    width: 5%;
+    height: 90%;
+  }
+  .header .nav__menu {
+    width: 4%;
+    height: 90%;
+  }
+  .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .container__div {
+    width: 30%;
+    height: 50vh;
+    transition: all 0.5s;
+  }
+  .container__div:hover {
+    transform: scale(1.1, 1.1);
+  }
+}/*# sourceMappingURL=main.css.map */

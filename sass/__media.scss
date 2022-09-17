@@ -1,0 +1,29 @@
+.header{
+    .nav{
+        &__logo{
+            @include size(10%,100%);
+        }
+        &__shopping{
+            position:relative;
+            left: 35%;
+            @include size(5%,90%);
+        }
+        &__menu{
+            @include size(4%,90%);
+        }
+    }
+}
+
+.container{
+    @include size(100%,auto);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    &__div{
+        @include size(30%,50vh);
+        transition: all 0.5s;
+    }
+    &__div:hover{
+        transform: scale(1.1,1.1);
+    }
+}
