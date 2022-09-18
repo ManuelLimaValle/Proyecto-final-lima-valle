@@ -92,10 +92,10 @@ computers.forEach((produc)=>{
 });
 
 const addCard = (idType)=>{
-    const item = computers.find((e) => {e.modelo == idType})
+    const item = computers.find((e) => e.modelo === idType)
     cartShopping.push(item);
     number.innerText = cartShopping.length;
-    console.log(item);
+    console.log(cartShopping);
 }
 
 
