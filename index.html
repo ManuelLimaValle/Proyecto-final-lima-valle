@@ -4,75 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OXIRIUM</title>
-    <link rel="icon" type="image/png" href="img/icons8-european-dragon-60.png">
-    <link rel="stylesheet" href="./sass/main.css">
+    <title>Oxirium</title>
+    <link rel="stylesheet" href="./scss/normalize.css">
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="shortcut icon" href="./img/logos/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav__logo">
-                <img src="./img/icons8-european-dragon-60.png" alt="dragon icon" class="nav__icon">
-                <p class="nav__p">oXirium</p>
+                <a href="#" class="nav__a">
+                    <img src="./img/logos/logo.png" alt="Dragon" class="nav__icon">
+                </a>
+                <p class="nav__name">Oxirium</p>
             </div>
-            <ul class="nav__ul nav__active">
-                <li class="nav__li"><a href="#" class="nav__link"> item</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">Lorem ipsum dolor sit.</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">item</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">item</a></li>
-            </ul>
-            <div class="nav__shopping">
-                <p class="nav__number"></p>
-                <img src="./img/icons8-shopping-cart-60.png" alt="shooping cart" class="nav__cart">
+            <div class="nav__navbar nav__active">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="#" class="nav__a">items</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">items</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">items</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">items</a></li>
+                </ul>
+            </div>
+            <div class="nav__cart">
+                <p class="nav__p">0</p>
+                <a href="./secciones/compras.html" class="nav__link"><img src="./img/logos/carrito.png" alt="Carrito" class="nav__img"></a>
             </div>
             <div class="nav__menu">
-                <div class="nav__tail">
-                    <span class="nav__span"></span>
-                    <span class="nav__span nav__span--height"></span>
-                    <span class="nav__span nav__span--low"></span>
-                </div>
+                <span class="nav__span-1"></span>
+                <span class="nav__span-1 nav__span-1--medio"></span>
+                <span class="nav__span-1 nav__span-1--abajo"></span>
             </div>
         </nav>
-        <div class="carrusel">
-            
+        <div class="header__carrusel">
+            <div class="header__slider">
+                <div class="header__slide">
+                    <img src="./img/logos/msi.png" alt="logo" class="header__img">
+                    <div class="header__promo">
+                        <div class="header__text">
+                            <h1 class="header__h1">OFERTA EXCLUSIVA</h1>
+                            <p class="header__parrafo">consigue regalos y combos packs por la compra de productos asus/MSI seleccionados</p>
+                        </div>
+                        <img src="./img/personajes/computadora-gamer.png" alt="pc" class="header__pc">
+                    </div>
+                </div>
+                <div class="header__slide header__slide--fondo1"></div>
+                <div class="header__slide header__slide--fondo2"></div>
+            </div>
         </div>
     </header>
     <main>
-        <div class="container">
-            <form action="" class="container__form">
-                <div class="container__check">
-                    <div class="container__checkbox">
-                        <label for="LENOVO">LENOVO</label>
-                        <input class="conteiner__check" type="checkbox" name="lenovo" value="LENOVO" id="lenovo">
-                    </div>
-                    <div class="container__checkbox">
-                        <label for="HP">HP</label>
-                        <input class="conteiner__check" type="checkbox" name="hp" value="HP" id="hp">
-                    </div>
-                    <div class="container__checkbox">
-                        <label for="DELL">DELL</label>
-                        <input class="conteiner__check" type="checkbox" name="dell" value="DELL" id="dell">
-                    </div>
-                    <div class="container__checkbox">
-                        <label for="HP">ASUS</label>
-                        <input class="conteiner__check" type="checkbox" name="asus" value="ASUS" id="asus">
-                    </div>
+        <div class="contenedor">
+            <form action="" class="form">
+                <div class="form__seach">
+                    <label for="search">Buscar:</label>
+                    <input type="search" name="buscador" value="buscar" id="search">
+                </div>
+                <div class="form__check">
+                   
+                </div>
+                <div class="form__range">
+                    <input type="range" max="300000" min="100000" value="100000" name="" id="">
                 </div>
             </form>
-            <div class="container__product">
+            <div class="contenedor__pc">
                 
-            </div>
-        </div>
-        <div class="containerTwo">
+            </div>    
         </div>
     </main>
     <footer>
 
     </footer>
-    <script src="./main.js"></script>
 </body>
+<script src="./main.js"></script>
 </html>
-

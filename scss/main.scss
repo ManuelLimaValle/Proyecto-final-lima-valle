@@ -1,0 +1,26 @@
+$rojo:#ff0000;
+$negro:#000000;
+$azul:#0000ff;
+$verde:#00ff00;
+$naranja: #fb7d00;
+$blanco:#ffffff;
+
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Bebas Neue',sans-serif;
+}
+
+@mixin size($ancho,$alto) {
+     width: $ancho;
+     height: $alto;
+}
+
+@mixin fondo($direccion,$tamanio) {
+     background: $direccion;
+     background-size: $tamanio;
+}
+
+@import "./secciones/header";
+@import "./secciones/seccion";

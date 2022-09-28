@@ -1,0 +1,108 @@
+.contenedor{
+    @include size(100%,auto);
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    .form{
+        @include size(15%,auto);
+
+    }
+    .contenedor__pc{
+        @include size(84%,auto);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        .contenedor__laptop{
+            @include size(33%,50vh);
+            background: url(../../img/fondos/fondo-laptop.jpg);
+            background-size: cover;
+            margin-top: 5px;
+            color:$blanco;
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            grid-template-rows: repeat(4,25%);
+            grid-template-areas:
+            "imagen lista"
+            "imagen lista"
+            "precio lista"
+            "boton  lista"
+            ;
+            .contenedor__img{
+                grid-area: imagen;
+                @include size(100%,100%);
+            }
+            .contenedor__list{
+                grid-area: lista;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-evenly;
+                align-content: center;
+                .contenedor__items{
+                    width: 80%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content:flex-start;
+                    align-items: center;
+                    .contenedor__logo{
+                        @include size(40px,40px);
+                    }
+                    .contenedor__logo--expancion{
+                        @include size(145px,55px);
+                        background:$blanco;
+                        border-radius: 10px;
+                    }
+                    .contenedor__h4{
+                        margin-left: 10px;
+                    }
+                    .contenedor__p{
+                        margin-left: 1px;
+                    }
+                }
+            }
+            .contenedor__page{
+                grid-area: precio;
+                @include size(50%,100%);
+                background:linear-gradient(to right,rgba(27, 27, 177, 0.774),rgba(219, 18, 219, 0.61));
+                border-radius: 50px;
+                .contenedor__price{
+                    color:$blanco;
+                    padding: 0px 20px;
+                    text-align: center;
+                    position: relative;
+                    top: 25px;
+                }
+            }
+            .contenedor__page:nth-child(3){
+                justify-self: center;
+            }
+            .contenedor__button{
+                grid-area: boton;
+                @include size(60%,30%);
+            }
+            .contenedor__button:nth-child(4){
+                justify-self: center;
+                align-self: center;
+            }
+        }
+        .contenedor__laptop--HP{
+            background: url(../../img/fondos/fondo-hp.jpg);
+            background-size: cover;
+        }
+        .contenedor__laptop--LENOVO{
+            background: url(../../img/fondos/fondo-lenovo.jpg);
+            background-size: cover;
+        }
+        .contenedor__laptop--MSI{
+            background: url(../../img/fondos/fondo-msi.jpg);
+            background-size: cover;
+        }
+        .contenedor__laptop--ASUS{
+            background: url(../../img/fondos/fondo-asus.jpg);
+            background-size: cover;
+        }
+        .contenedor__laptop--DELL{
+            background: url(../../img/fondos/fondo-dell.jpg);
+            background-size: cover;
+        }
+    }
+}

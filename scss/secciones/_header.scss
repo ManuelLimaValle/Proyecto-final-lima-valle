@@ -1,0 +1,163 @@
+.header{
+    @include size(100%,100vh);
+    .nav{
+        position:fixed;
+        @include size(100%,8%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all .2s;
+        z-index: 10;
+        &__logo{
+            @include size(8%,80%);
+            background-color: $naranja;
+            margin-left: 20px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content:center;
+            align-items: center;
+            .nav__a{
+                display:inline-block;
+                margin-top: 1px;
+                @include size(35%,100%);
+                .nav__icon{
+                    @include size(100%,100%);
+                }
+            }
+            .nav__name{
+                display:inline-block;
+                font-size: 1.5rem;
+                margin-left: 6px;
+                margin-bottom: 5px;
+                @include size(50%,40%);
+                color:$negro;
+            }
+        }
+        &__navbar{
+            position: fixed;
+            @include size(50%,92%);
+            background-color: $verde;
+            top:8%;
+            right: 0%;
+            opacity: 1;
+            transition: all 0.9s;
+            .nav__ul{
+                list-style: none;
+            }
+        }
+        &__active{
+            opacity: 0;
+            right: -100%;
+        }
+        &__cart{
+            @include size(4%,90%);
+            position: relative;
+            margin-left: 75%;
+            .nav__p{
+                position:absolute;
+                left: 25px;
+                background-color: $naranja;
+                border: 2px solid $negro;
+                border-radius: 20px;
+                padding: 1px 7px;
+                color: $blanco;
+            }
+            .nav__link{
+                @include size(90%,90%);
+                .nav__img{
+                    @include size(100%,100%);
+                }
+            }
+        }
+        &__menu{
+            @include size(4%,90%);
+            margin-right: 10px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content:space-evenly;
+            align-items: flex-end;
+            cursor: pointer;
+            .nav__span-1{
+                position: relative;
+                @include size(100%,5px);
+                background-color: $naranja;
+                transition: all .2s;
+            }
+            
+        }
+        &__menu:hover{
+            .nav__span-1--medio{
+                width: 60%;
+               
+            }
+            .nav__span-1--abajo{
+                width: 30%;
+            }
+        }
+    }
+    &__carrusel{
+        @include size(100%,100vh);
+        overflow: hidden;
+        .header__slider{
+            @include size(300%,100vh);
+            display:flex;
+            margin-left: 0%;
+            .header__slide{
+                @include size(100%,100vh);
+                background: url(../../img/fondos/fondo-1.jpg);
+                background-size: cover;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content:space-between;
+                align-items: center;
+                .header__img{
+                    @include size(30%,80%);
+                }
+                .header__promo{
+                    @include size(60%,100%);
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-content: center;
+                    justify-content: center;
+                    .header__text{
+                        @include size(100%,40%);
+                        position: relative;
+                        right: 100px;
+                        .header__h1{
+                            color: #aa18aac0;
+                            font-size: 5rem;
+                            text-align: center;
+                            position: relative;
+                            top:40px;
+                        }
+                        .header__parrafo{
+                            color:$blanco;
+                            width: 100%;
+                            text-align: center;
+                            font-size: 2rem;
+                            padding: 0px 190px;
+                            
+                        }
+                    }
+                    .header__pc{
+                        @include size(60%,50%);
+                        position: relative;
+                        left: 120px;
+                    }
+                }
+            }
+
+            .header__slide--fondo1{
+                @include size(100%,100vh);
+                background: url(../../img/fondos/fondo-2.jpg);
+                background-size: cover;
+                
+            }
+            .header__slide--fondo2{
+                @include size(100%,100vh);
+                background: url(../../img/fondos/fondo-3.jpg);
+                background-size: cover;
+            }
+        }
+    }
+}

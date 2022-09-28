@@ -1,130 +1,183 @@
-//***************************************************************CURRUSEL********************************** */
+const menu = document.querySelector(".nav__menu");//<div class="nav__menu">
+const toggle = document.querySelector(".nav__navbar")//menu nav
+menu.addEventListener("click",()=>{
+    toggle.classList.toggle("nav__active");
+})// click de menu desplegable
+
+const nav = document.querySelector(".nav");
+window.addEventListener("scroll",()=>{
+    let scrollear = window.scrollY; // scrollY posicion en el eje Y
+    (scrollear > 50)? nav.style.backgroundColor = "black" : nav.style.backgroundColor = "transparent";
+ // si el scrollear supera los 200px el color del fondo es negro
+// de lo contrario trasparente
+
+})
 
 
-
-
-
-
-
-
-// ************************************************* NOTEBOOK **************************************************
-let cartShopping = [];
-
-class Computadora{
-    constructor(name,modelo,mark,color,ram,processor,graphics,screen,disc,precio){
+class Computer{
+    constructor(name,ram,disc,graphis,modelo,processor){
         this.name = name;
-        this.modelo = modelo;
-        this.mark = mark;
-        this.color = color;
         this.ram = ram;
-        this.processor = processor;
-        this.graphics = graphics;
-        this.screen = screen;
         this.disc = disc;
-        this.precio = precio;
+        this.graphis = graphis;
+        this.modelo = modelo;
+        this.processor = processor;
     }
 }
 
-const lenovoIdeapadFlex5 = new Computadora("Ideapad flex 5","1165G7","LENOVO","Gris",16,"INTEL CORE I7","INTEL IRIS",15.6,"512 GB",195000);
+class Laptop extends Computer{
+    constructor(name,ram,disc,graphis,modelo,processor,mark,screen,resolution,price){
+        super(name,ram,disc,graphis,modelo,processor);
+        this.mark  = mark;
+        this.screen = screen;
+        this.resolution = resolution;
+        this.price = price;
+    }
+}
+// name,ram,disc,graphis,modelo,processor,mark,screen,resolution,price
+const  lenovo17ach6h = new Laptop("LENOVO LEGION 5","32 GB","1TB SSD","GEFORCE RTX3070","17ACH6H","RYZEN 7 5800H","LENOVO",17.3,"FULL HD","$480.000");
+const lenovo15ach6 = new Laptop("LENOVO LEGION S7","32 GB","1TB SSD","GEFORCE RTX3060","15ACH6","RYZEN 9 5900HX","LENOVO",15.6,"FULL HD","$460.000");
+const lenovoIdeapad15itl05 = new Laptop("LENOVO IDEAPAD 5","16 GB","512GB SSD","GEFORCE MX450","15ITL05","INTEL CORE I7","LENOVO",15.6,"FULL HD","$230.000");
+const hp15zef2000 = new Laptop("HP","16 GB","512GB SSD","AMD RADEON","15Z-EF2000","RYZEN 7 5700U","HP",15.6,"FULL HD","$200.000");
+const hpVictus15fb = new Laptop("HP VICTUS","16 GB","512GB SSD","GEFORCE RTX3050TI","15-FB0075CL","RYZEN 7 5800H","HP",15.6,"FULL HD","$290.000")
+const hpOmenCk0xxx = new Laptop("HP OMEN","32 GB","1TB SSD","GEFORCE RTX3060","CK0XXX","INTEL CORE I7","HP",17.3,"144HZ","$450.000")
+const msiLeopard10sdk = new Laptop("MSI LEOPARD","16 GB","512GB SSD","GEFORCE GTX166TI","10SDK","INTEL CORE I7 10TH","MSI",17.6,"144HZ","$300.000")
+const msiCrosshairA11uck = new Laptop("MSI CROSSHAIR","32 GB","512GB SSD","GEFORCE RTX3050","A11UCK-646","INTEL CORE I7","MSI",17.3,"FULL HD","$365.000");
+const msiSword15 = new Laptop("MSI SWORD","32 GB","512GB SSD","GEFORCE RTX3050TI","A11UD","INTEL CORE I7","MSI",17.3,"144HZ","$365.000");
+const asusX512ja = new Laptop("ASUS VBGB","20 GB","256GB SSD","INTEL IRIS","X512JA","INTEL CORE I7 1065","ASUS",15.6,"FULL HD","$205.000");
+const asusTufFx70 = new Laptop("ASUS TUF","16 GB","512GB SSD","GEFORCE RTX3050TI","FX706HE","INTEL CORE I5","ASUS",17.3,"144HZ","$270.000");
+const asusZeQ4 = new Laptop("ASUS ZENBOOK","8 GB","256GB SSD","GEFORCE MX450","Q408UG","RYZEN 5 5500U","ASUS",14,"FULL HD","$200.000")
+const dellLatitude73 = new Laptop("DELL LATITUDE","16 GB","512GB SSD","INTEL IRIS","7390","INTEL CORE I7 8TH","DELL",13.3,"FULL HD","$190.000")
+const acerPredator300 = new Laptop("ACER PREDATOR","16 GB","512 GB SSD","GEFORCE RTX3060","HELIOS300","INTEL CORE I7 11800H","ACER",15.6,"FULL HD","$399.000")
+const dellInspiron35 = new Laptop("DELL INSPIRON","16 GB","256GB SSD","INTEL IRIS","3511","INTEL CORE I5 10TH","DELL",15.6,"FULL HD","$180.000")
 
-const hpPavilion = new Computadora("Hp Pavilion","13BB9X","HP","Blanco",8,"INTEL CORE I7","INTEL IRIS",13.3,"512 GB",190000);
+let computers = [lenovo15ach6,hp15zef2000,lenovoIdeapad15itl05,lenovo17ach6h,hpVictus15fb,hpOmenCk0xxx,msiLeopard10sdk,msiSword15,asusX512ja,asusTufFx70,asusZeQ4,dellLatitude73,msiCrosshairA11uck,acerPredator300,dellInspiron35];
+let buys = [];
+const containerPc = document.querySelector(".contenedor__pc");
 
-const msiThin = new Computadora("Msi Thin","GF65THIN","MSI","Negro",16,"INTEL CORE I7 10TH GEN","GEFORCE GTX 6GB 1660",15.6,"512 GB",270000);
-
-const hpEnvy = new Computadora("Hp Envy","15-EP1065","HP","Blanco",32,"INTEL CORE I7","GEFORCE RTX 3060",15.6,"1 TB",380000);
-
-const lenovoLegionY7 = new Computadora("LENOVO LEGIÓN Y740","Y740","LENOVO","Negro",32,"INTEL CORE I7 9TH GEN","GEFORCE RTX 8GB 2070",15.6,"256 GB",395000);
-
-const asusVivobookX7 = new Computadora("ASUS VIVOBOOK","X712JA","ASUS","Blanco",20,"INTEL CORE I5 10TH GEN","INTEL IRIS",17.3,"256 GB",180000);
-
-const lenovoIdeapad14 = new Computadora("LENOVO IDEAPAD","14IML05","LENOVO","Blanco",20,"INTEL CORE I5 10TH GEN","INTEL IRIS",14,"512 GB",155000);
-
-const msiStealth15M = new Computadora("MSI STEALTH 15M A11UEKV","A11UEKV","MSI","Gris",32,"INTEL CORE I7","GEFORCE RTX 3060 6GB",15.6,"1 TB",415000);
-
-const mainDiv = document.querySelector(".container__product");
-
-let computers = [lenovoIdeapadFlex5,hpPavilion,msiThin,hpEnvy,lenovoLegionY7,asusVivobookX7,lenovoIdeapad14,msiStealth15M];
-
-const fragmen = document.createDocumentFragment();
-
-const imagen = (item1,item2) =>{ return `<img src ="./img/logos/${item1}.${item2}" class="container__logo">`}
-
-
-/* const p = document.querySelectorAll(".conteiner__check");
-let array = [];
-let recorrido = [lenovoIdeapad14];
-for(let compu of p ){
-    compu.addEventListener("click",()=>{
-        if(compu.checked == true){
-            array.push(compu.value);
-            array.forEach((element)=>{
-                let f = computers.filter((e)=>element == e.mark);
-                recorrido.concat(f);
-                console.log(recorrido);
-            })
-        }else{
-            let n = array.indexOf(compu.value);
-            array.splice(n,2)
-            console.log("borre");
+let processors = ["RYZEN 9","RYZEN 7","RYZEN 5","RIZEN 3","INTEL CORE I7","INTEL CORE I5","INTEL CORE I7 10TH","INTEL CORE I7 8TH","INTEL CORE I5 10TH"];
+let graphi = ["GEFORCE RTX","GEFORCE GTX","INTEL IRIS","AMD RADEON","GEFORCE MX"];
+//necesito una funcion que me corte los nombres
+function listImg(name,list){ //la funcion recibe un nombre y busca en su lista si uno coincide
+    let choose;
+    for(let one of list){
+        if(name.includes(one)){
+            choose = one;
         }
-    })
-} */
+    }
+    return choose;
+}
 
-computers.forEach((produc)=>{
-    const container = document.createElement("DIV");
-    container.classList.add("container__div")
-    container.innerHTML =`
-    <ul class="container__ul">
-        <li class="container__li">
-            <h4 class="container__h2">${produc.name}</h4>
-        </li>
-        <li class="container__li">
-            <img src="./img/logos/ssd.png" class="container__logo">
-            <span class="container__span">${produc.disc} </span>
-        </li>
-        <li class="container__li">
-            <img src="./img/logos/ram.png" class="container__logo">
-            <span class="container__span">${produc.ram} GB </span>
-        </li>
-        <li class="container__li">
-            <img src="./img/logos/widescreen.png" class="container__logo">
-            <span class="container__span">${produc.screen}</span>
-        </li>
-        <li class="container__li">
-            <img src="./img/logos/${produc.processor}.jpg" class="container__logo">
-            <span class="container__span">${produc.processor} </span>
-        </li>
-        <li class="container__li">
-            <img src="./img/logos/${produc.graphics.substring(0,11)}.jpg" class="container__logo">
-            <span class="container__span">${produc.graphics} </span>
-        </li>
-    </ul>
-    <p class="container__p">${produc.precio}$</p>
-    <img src="../img/notebook/${produc.modelo}.png" class="container__img" alt="${produc.modelo}">
-    <button class="container__button" id="${produc.modelo}">agregar a carrito</button>
-    `;
-    fragmen.appendChild(container);
-    mainDiv.appendChild(fragmen);
-    const botton = document.getElementById(produc.modelo);
-    botton.addEventListener("click",()=>{
-        addCard(produc.modelo);
-    })
-});
-
-const addCard = (idType)=>{
-    const item = computers.find((e) => e.modelo === idType)
-    cartShopping.push(item);
-    number.innerText = cartShopping.length;
+function action(list){
+    list.forEach((e)=>{
+        const newContainer = document.createElement("DIV");//crear contenedor div que contendra las notebooks
+        newContainer.classList.add("contenedor__laptop")
+        newContainer.classList.add(`contenedor__laptop--${e.mark}`);
+        newContainer.innerHTML= `
+            <img class="contenedor__img" src="./img/laptop/${e.mark}/${e.modelo}.png" alt="${e.modelo}">
+            <div class="contenedor__list">
+                <div class="contenedor__items">
+                    <h4 class="contenedor__h4">${e.name} ${e.modelo}</h4>
+                </div>
+                <div class="contenedor__items">
+                    <img class="contenedor__logo" src="./img/logos/ram.png" alt="memoria ram">
+                    <p class="contenedor__p">${e.ram}</p>
+                </div>
+                <div class="contenedor__items">
+                    <img class="contenedor__logo" src="./img/logos/ssd.png" alt="disco">
+                    <p class="contenedor__p">${e.disc}</p>
+                </div>
+                <div class="contenedor__items">
+                    <img class="contenedor__logo" src="./img/logos/widescreen.png" alt="pantalla">
+                    <p class="contenedor__p">${e.screen}</p>
+                </div>
+                <div class="contenedor__items">
+                    <img class="contenedor__logo" src="./img/logos/${listImg(e.processor,processors)}.jpg" alt="procesador">
+                    <p class="contenedor__p">${e.processor}</p>
+                </div>
+                <div class="contenedor__items">
+                    <img class="contenedor__logo" src="./img/logos/${listImg(e.graphis,graphi)}.jpg" alt="graficos">
+                    <p class="contenedor__p">${e.graphis}</p>
+                </div>
+                <div class="contenedor__items">
+                    <img class="contenedor__logo contenedor__logo--expancion" src="./img/logos/${e.resolution}.png" alt="resolucion">
+                </div>
+            </div>
+            <div class="contenedor__page">
+                <p class="contenedor__price">${e.price} pesos</p>
+            </div>
+            <button class="contenedor__button" id="${e.modelo}">agregar a carrito</button>
+        `;
+        containerPc.appendChild(newContainer);//se agrega cada una de las notebooks
+        const section = document.getElementById(`${e.modelo}`);
+        section.addEventListener("click",()=>{
+            buys.push(e);//agrega elemento al carrito
+            cart.innerHTML = buys.length;//cambia el contenido del contador carrito cada ves que se produce un evento en el boton
+            let save = JSON.stringify(buys);
+            localStorage.setItem("mis compras",save);
+        });
+    });
 }
 
 
 
-const navbar = document.querySelector(".nav__menu");
-const menu = document.querySelector(".nav__ul")
 
-navbar.addEventListener("click",() => {menu.classList.toggle("nav__active")});
+const check = document.querySelector(".form__check");
+check.innerHTML =`
+<div class="form__select">
+    <label class="form__label" for="LENOVO">LENOVO (${seachCant("LENOVO")})</label>
+    <input type="checkbox" class="form__ckecked" name="LENOVO" value="LENOVO" id="LENOVO">
+</div>
+<div class="form__select">
+    <label class="form__label" for="HP">HP (${seachCant("HP")})</label>
+    <input type="checkbox" class="form__ckecked" name="HP" value="HP" id="HP">
+</div>
+<div class="form__select">
+    <label class="form__label" for="MSI">MSI (${seachCant("MSI")})</label>
+    <input type="checkbox" class="form__ckecked" name="MSI" value="MSI" id="MSI">
+</div>
+<div class="form__select">
+    <label class="form__label" for="ACER">ACER (${seachCant("ACER")})</label>
+    <input type="checkbox" class="form__ckecked" name="ACER" value="ACER" id="ACER">
+</div>
+<div class="form__select">
+    <label class="form__label" for="DELL">DELL (${seachCant("DELL")})</label>
+    <input type="checkbox" class="form__ckecked" name="DELL" value="DELL" id="DELL">
+</div>
+`
+function seachCant(names){
+    let cant = computers.filter((e)=> e.mark === names);
+    return cant.length;
+}
 
-let number = document.querySelector(".nav__number");
-number.innerHTML = cartShopping.length;
+action(computers);
 
+let cart = document.querySelector(".nav__p")//selecciona la etiqueta contador de carrito
+let number = localStorage.getItem("mis compras");
+cart.innerHTML = JSON.parse(number).length;
+
+let  option = document.querySelectorAll(".form__ckecked");
+let  stop = true;
+let hijos = true;
+for(let caption of option){
+    caption.addEventListener("click",()=>{
+        if(caption.checked == true){
+            let arrayBuy = computers.filter((e)=> e.mark == caption.value);
+            if(stop){
+                let borrar = document.querySelectorAll(".contenedor__laptop");
+                for(let y of borrar){
+                    containerPc.removeChild(y);
+                } 
+            }
+            stop = false;
+            action(arrayBuy);
+        }else{
+            const reload = document.querySelectorAll(`.contenedor__laptop--${caption.value}`)
+            for(let o of reload){
+                containerPc.removeChild(o);
+            }
+         
+        }
+    })
+}
 
