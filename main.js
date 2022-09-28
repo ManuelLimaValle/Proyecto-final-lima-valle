@@ -158,7 +158,6 @@ cart.innerHTML = JSON.parse(number).length;
 
 let  option = document.querySelectorAll(".form__ckecked");
 let  stop = true;
-let hijos = true;
 for(let caption of option){
     caption.addEventListener("click",()=>{
         if(caption.checked == true){
@@ -173,8 +172,8 @@ for(let caption of option){
             action(arrayBuy);
         }else{
             const reload = document.querySelectorAll(`.contenedor__laptop--${caption.value}`)
-            for(let o of reload){
-                containerPc.removeChild(o);
+            for(let i of reload){
+                containerPc.removeChild(i);
             }
          
         }
