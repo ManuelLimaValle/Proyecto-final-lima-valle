@@ -94,15 +94,17 @@
                 justify-content: flex-end;
                 .nav__span{
                     display: block;
-                    @include size(100%,10%);
+                    @include size(100%,4px);
+                    border-radius: 20px;
                     background-color: #ff0000;
+                    
                 }
-                .nav__span--height{
+             /*    .nav__span--height{
                     @include size(70%,10%);
                 }
                 .nav__span--low{
                     @include size(40%,10%);
-                }
+                } */
             }
             
         }

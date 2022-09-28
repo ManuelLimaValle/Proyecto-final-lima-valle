@@ -25,23 +25,23 @@ class Computadora{
     }
 }
 
-const lenovoIdeapadFlex5 = new Computadora("Ideapad flex 5","1165G7","LENOVO","Gris",16,"intel core i7","INTEL IRIS",15.6,"512 GB",195000);
+const lenovoIdeapadFlex5 = new Computadora("Ideapad flex 5","1165G7","LENOVO","Gris",16,"INTEL CORE I7","INTEL IRIS",15.6,"512 GB",195000);
 
-const hpPavilion = new Computadora("Hp Pavilion","13BB9X","HP","Blanco",8,"intel core i7","INTEL IRIS",13.3,"512 GB",190000);
+const hpPavilion = new Computadora("Hp Pavilion","13BB9X","HP","Blanco",8,"INTEL CORE I7","INTEL IRIS",13.3,"512 GB",190000);
 
-const msiThin = new Computadora("Msi Thin","GF65THIN","MSI","Negro",16,"intel i7 10TH GEN","GEFORCE GTX 6GB 1660",15.6,"512 GB",270000);
+const msiThin = new Computadora("Msi Thin","GF65THIN","MSI","Negro",16,"INTEL CORE I7 10TH GEN","GEFORCE GTX 6GB 1660",15.6,"512 GB",270000);
 
-const hpEnvy = new Computadora("Hp Envy","15-EP1065","HP","Blanco",32,"intel core i7","GEFORCE RTX 3060",15.6,"1 TB",380000);
+const hpEnvy = new Computadora("Hp Envy","15-EP1065","HP","Blanco",32,"INTEL CORE I7","GEFORCE RTX 3060",15.6,"1 TB",380000);
 
-const lenovoLegionY7 = new Computadora("LENOVO LEGIÓN Y740","Y740","LENOVO","Negro",32,"intel core i7 9th Gen","GEFORCE RTX 8GB 2070",15.6,"256 GB",395000);
+const lenovoLegionY7 = new Computadora("LENOVO LEGIÓN Y740","Y740","LENOVO","Negro",32,"INTEL CORE I7 9TH GEN","GEFORCE RTX 8GB 2070",15.6,"256 GB",395000);
 
-const asusVivobookX7 = new Computadora("ASUS VIVOBOOK","X712JA","ASUS","Blanco",20,"intel core i5 10th Gen","INTEL IRIS",17.3,"256 GB",180000);
+const asusVivobookX7 = new Computadora("ASUS VIVOBOOK","X712JA","ASUS","Blanco",20,"INTEL CORE I5 10TH GEN","INTEL IRIS",17.3,"256 GB",180000);
 
-const lenovoIdeapad14 = new Computadora("LENOVO IDEAPAD","14IML05","LENOVO","Blanco",20,"intel core i5 10th Gen","INTEL IRIS",14,"512 GB",155000);
+const lenovoIdeapad14 = new Computadora("LENOVO IDEAPAD","14IML05","LENOVO","Blanco",20,"INTEL CORE I5 10TH GEN","INTEL IRIS",14,"512 GB",155000);
 
-const msiStealth15M = new Computadora("MSI STEALTH 15M A11UEKV","A11UEKV","MSI","Gris",32,"intel core i7","GEFORCE RTX 3060 6GB",15.6,"1 TB",415000);
+const msiStealth15M = new Computadora("MSI STEALTH 15M A11UEKV","A11UEKV","MSI","Gris",32,"INTEL CORE I7","GEFORCE RTX 3060 6GB",15.6,"1 TB",415000);
 
-const mainDiv = document.querySelector(".container");
+const mainDiv = document.querySelector(".container__product");
 
 let computers = [lenovoIdeapadFlex5,hpPavilion,msiThin,hpEnvy,lenovoLegionY7,asusVivobookX7,lenovoIdeapad14,msiStealth15M];
 
@@ -49,6 +49,26 @@ const fragmen = document.createDocumentFragment();
 
 const imagen = (item1,item2) =>{ return `<img src ="./img/logos/${item1}.${item2}" class="container__logo">`}
 
+
+/* const p = document.querySelectorAll(".conteiner__check");
+let array = [];
+let recorrido = [lenovoIdeapad14];
+for(let compu of p ){
+    compu.addEventListener("click",()=>{
+        if(compu.checked == true){
+            array.push(compu.value);
+            array.forEach((element)=>{
+                let f = computers.filter((e)=>element == e.mark);
+                recorrido.concat(f);
+                console.log(recorrido);
+            })
+        }else{
+            let n = array.indexOf(compu.value);
+            array.splice(n,2)
+            console.log("borre");
+        }
+    })
+} */
 
 computers.forEach((produc)=>{
     const container = document.createElement("DIV");
@@ -95,7 +115,6 @@ const addCard = (idType)=>{
     const item = computers.find((e) => e.modelo === idType)
     cartShopping.push(item);
     number.innerText = cartShopping.length;
-    console.log(cartShopping);
 }
 
 

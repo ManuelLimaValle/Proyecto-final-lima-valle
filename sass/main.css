@@ -111,20 +111,19 @@
   flex-flow: row wrap;
   align-content: space-around;
   justify-content: flex-end;
+  /*    .nav__span--height{
+         @include size(70%,10%);
+     }
+     .nav__span--low{
+         @include size(40%,10%);
+     } */
 }
 .header .nav__menu .nav__tail .nav__span {
   display: block;
   width: 100%;
-  height: 10%;
+  height: 4px;
+  border-radius: 20px;
   background-color: #ff0000;
-}
-.header .nav__menu .nav__tail .nav__span--height {
-  width: 70%;
-  height: 10%;
-}
-.header .nav__menu .nav__tail .nav__span--low {
-  width: 40%;
-  height: 10%;
 }
 .header .carrusel {
   width: 100%;
@@ -142,7 +141,11 @@
   width: 100%;
   height: auto;
 }
-.container__div {
+.container__product {
+  display: flex;
+  flex-flow: column wrap;
+}
+.container__product .container__div {
   width: 100%;
   height: 60vh;
   background: url(../img/fondo-notebook.jpg);
@@ -155,31 +158,31 @@
   grid-template-columns: repeat(2, 50%);
   grid-template-areas: "imagen lista" "imagen lista" "precio lista" "boton lista";
 }
-.container__div .container__ul {
+.container__product .container__div .container__ul {
   grid-area: lista;
   color: #ffffff;
   list-style: none;
 }
-.container__div .container__ul .container__li {
+.container__product .container__div .container__ul .container__li {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   margin: 5px;
 }
-.container__div .container__ul .container__li .container__logo {
+.container__product .container__div .container__ul .container__li .container__logo {
   width: 48px;
   height: 50px;
 }
-.container__div .container__ul .container__li .container__span {
+.container__product .container__div .container__ul .container__li .container__span {
   margin-left: 10px;
   font-size: 13px;
 }
-.container__div .container__img {
+.container__product .container__div .container__img {
   grid-area: imagen;
   width: 100%;
   height: 100%;
 }
-.container__div .container__button {
+.container__product .container__div .container__button {
   grid-area: boton;
   background: linear-gradient(to left, rgb(245, 14, 14), rgb(245, 245, 17));
   border-radius: 20px;
@@ -187,7 +190,7 @@
   color: #000000;
   cursor: pointer;
 }
-.container__div .container__p {
+.container__product .container__div .container__p {
   background: url(../img/logos/precios.png);
   background-size: cover;
   grid-area: precio;
@@ -207,7 +210,7 @@
     height: 90%;
   }
   .header .nav__menu {
-    width: 4%;
+    width: 3%;
     height: 90%;
   }
   .container {
@@ -215,14 +218,27 @@
     height: auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-  .container__div {
+  .container__form {
+    width: 14%;
+    height: 40vh;
+    background-color: green;
+  }
+  .container__product {
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  .container__product .container__div {
     width: 30%;
     height: 50vh;
     transition: all 0.5s;
+    margin: 10px 0px;
   }
-  .container__div:hover {
+  .container__product .container__div:hover {
     transform: scale(1.1, 1.1);
   }
 }/*# sourceMappingURL=main.css.map */
