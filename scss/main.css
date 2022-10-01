@@ -80,13 +80,60 @@
   padding: 1px 7px;
   color: #ffffff;
 }
-.header .nav__cart .nav__link {
-  width: 90%;
-  height: 90%;
-}
-.header .nav__cart .nav__link .nav__img {
+.header .nav__cart .nav__img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+.header .nav__cart .nav__buy {
+  width: 35%;
+  height: 40%;
+  background-color: #484848;
+  position: fixed;
+  right: 120px;
+  bottom: 52%;
+  opacity: 1;
+}
+.header .nav__cart .nav__buy .nav__product {
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  margin: 0 auto;
+}
+.header .nav__cart .nav__buy .nav__product .nav__modelo {
+  width: 90%;
+  height: 20vh;
+  display: flex;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  border-bottom: 1px #fb7d00 solid;
+  position: relative;
+  transition: all 0.1s;
+}
+.header .nav__cart .nav__buy .nav__product .nav__modelo .nav__laptopImg {
+  width: 35%;
+  height: 90%;
+}
+.header .nav__cart .nav__buy .nav__product .nav__modelo .nav__junk {
+  position: absolute;
+  width: 8%;
+  height: 25%;
+  right: 0;
+  bottom: 90px;
+}
+.header .nav__cart .nav__buy .nav__product::-webkit-scrollbar {
+  width: 10px;
+}
+.header .nav__cart .nav__buy .nav__product::-webkit-scrollbar-thumb {
+  background-color: #fb7d00;
+  border-radius: 20px;
+}
+.header .nav__cart .nav__buyActive {
+  opacity: 0;
+  display: none;
 }
 .header .nav__menu {
   width: 4%;
@@ -118,67 +165,23 @@
 }
 .header__carrusel .header__slider {
   width: 300%;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  margin-left: 0%;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  transition: all 0.4s;
 }
 .header__carrusel .header__slider .header__slide {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: url(../../img/fondos/fondo-1.jpg);
   background-size: cover;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
 }
-.header__carrusel .header__slider .header__slide .header__img {
-  width: 30%;
-  height: 80%;
-}
-.header__carrusel .header__slider .header__slide .header__promo {
-  width: 60%;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
-}
-.header__carrusel .header__slider .header__slide .header__promo .header__text {
-  width: 100%;
-  height: 40%;
-  position: relative;
-  right: 100px;
-}
-.header__carrusel .header__slider .header__slide .header__promo .header__text .header__h1 {
-  color: rgba(170, 24, 170, 0.7529411765);
-  font-size: 5rem;
-  text-align: center;
-  position: relative;
-  top: 40px;
-}
-.header__carrusel .header__slider .header__slide .header__promo .header__text .header__parrafo {
-  color: #ffffff;
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  padding: 0px 190px;
-}
-.header__carrusel .header__slider .header__slide .header__promo .header__pc {
-  width: 60%;
-  height: 50%;
-  position: relative;
-  left: 120px;
-}
-.header__carrusel .header__slider .header__slide--fondo1 {
-  width: 100%;
-  height: 100vh;
+.header__carrusel .header__slider .header__slide--img1 {
   background: url(../../img/fondos/fondo-2.jpg);
   background-size: cover;
 }
-.header__carrusel .header__slider .header__slide--fondo2 {
-  width: 100%;
-  height: 100vh;
+.header__carrusel .header__slider .header__slide--img2 {
   background: url(../../img/fondos/fondo-3.jpg);
   background-size: cover;
 }
@@ -189,10 +192,26 @@
   margin-top: 20px;
   display: flex;
   flex-flow: row wrap;
+  background-color: #eaeaea;
 }
 .contenedor .form {
   width: 15%;
   height: auto;
+}
+.contenedor .form .form__mark {
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.contenedor .form .form__mark .form__title {
+  background-color: red;
+  width: 60%;
+  height: 100%;
+}
+.contenedor .form .form__mark .form__img {
+  background-color: blue;
 }
 .contenedor .contenedor__pc {
   width: 84%;
@@ -267,8 +286,13 @@
 }
 .contenedor .contenedor__pc .contenedor__laptop .contenedor__button {
   grid-area: boton;
-  width: 60%;
-  height: 30%;
+  border: none;
+  background-color: #fb7d00;
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  width: 75%;
+  height: 40%;
 }
 .contenedor .contenedor__pc .contenedor__laptop .contenedor__button:nth-child(4) {
   justify-self: center;

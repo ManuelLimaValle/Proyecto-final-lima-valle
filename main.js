@@ -115,11 +115,29 @@ function action(list){
             cart.innerHTML = buys.length;//cambia el contenido del contador carrito cada ves que se produce un evento en el boton
             let save = JSON.stringify(buys);
             localStorage.setItem("mis compras",save);
+            agregar(e);
         });
     });
 }
 
-
+const product = document.querySelector(".nav__product");
+function agregar(l){
+        const nuevo = document.createElement("DIV");
+        nuevo.classList.add("nav__modelo");
+        nuevo.innerHTML = `
+            <img class="nav__laptopImg" src="./img/laptop/${l.mark}/${l.modelo}.png">
+            <p class="nav__parrafoLaptop">${l.name} ${l.modelo}</p>
+            <p>${l.price}</p>
+            <img class="nav__junk" src="./img/logos/junk.png">
+            `
+        const junk = document.querySelectorAll(".nav__junk");
+        for(let i of junk){
+                i.addEventListener("click",()=>{
+                    console.log("borrar")
+                }) 
+        }
+        product.appendChild(nuevo);
+}
 
 
 const check = document.querySelector(".form__check");
@@ -180,3 +198,27 @@ for(let caption of option){
     })
 }
 
+
+let cont = 0;
+const slider = document.querySelector(".header__slider");
+const sliders = document.querySelectorAll(".header__slide");
+let width = sliders[0].clientWidth;
+
+setInterval(()=>{mover()},3000)
+
+function mover(){
+    cont++;
+    if(width*cont <= width*2){
+        slider.style.transform = `translateX(-${width*cont}px)`;
+    }else{
+        cont = 0;
+        slider.style.transform = `translateX(${width*cont}px)`;
+    }
+}
+
+const shopping = document.querySelector(".nav__img");
+const shoppingActive = document.querySelector(".nav__buy");
+
+shopping.addEventListener("click",()=>{
+    shoppingActive.classList.toggle("nav__buyActive");
+})
