@@ -68,7 +68,7 @@
             }
             .nav__buy{
                 @include size(35%,40%);
-                background-color:#484848;
+                background-color:#dddddd;
                 position:fixed;
                 right: 120px;
                 bottom: 52%;
@@ -88,8 +88,11 @@
                         border-bottom: 1px $naranja solid;
                         position: relative;
                         transition: all .10s;
-                        .nav__laptopImg{
+                        .nav__productImg{
                             @include size(35%,90%);
+                            .nav__laptopImg{
+                                @include size(100%,100%);
+                            }
                         }
                         .nav__junk{
                             position:absolute;

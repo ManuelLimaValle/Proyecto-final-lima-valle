@@ -88,7 +88,7 @@
 .header .nav__cart .nav__buy {
   width: 35%;
   height: 40%;
-  background-color: #484848;
+  background-color: #dddddd;
   position: fixed;
   right: 120px;
   bottom: 52%;
@@ -113,9 +113,13 @@
   position: relative;
   transition: all 0.1s;
 }
-.header .nav__cart .nav__buy .nav__product .nav__modelo .nav__laptopImg {
+.header .nav__cart .nav__buy .nav__product .nav__modelo .nav__productImg {
   width: 35%;
   height: 90%;
+}
+.header .nav__cart .nav__buy .nav__product .nav__modelo .nav__productImg .nav__laptopImg {
+  width: 100%;
+  height: 100%;
 }
 .header .nav__cart .nav__buy .nav__product .nav__modelo .nav__junk {
   position: absolute;

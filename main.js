@@ -35,21 +35,21 @@ class Laptop extends Computer{
     }
 }
 // name,ram,disc,graphis,modelo,processor,mark,screen,resolution,price
-const  lenovo17ach6h = new Laptop("LENOVO LEGION 5","32 GB","1TB SSD","GEFORCE RTX3070","17ACH6H","RYZEN 7 5800H","LENOVO",17.3,"FULL HD","$480.000");
-const lenovo15ach6 = new Laptop("LENOVO LEGION S7","32 GB","1TB SSD","GEFORCE RTX3060","15ACH6","RYZEN 9 5900HX","LENOVO",15.6,"FULL HD","$460.000");
-const lenovoIdeapad15itl05 = new Laptop("LENOVO IDEAPAD 5","16 GB","512GB SSD","GEFORCE MX450","15ITL05","INTEL CORE I7","LENOVO",15.6,"FULL HD","$230.000");
-const hp15zef2000 = new Laptop("HP","16 GB","512GB SSD","AMD RADEON","15Z-EF2000","RYZEN 7 5700U","HP",15.6,"FULL HD","$200.000");
-const hpVictus15fb = new Laptop("HP VICTUS","16 GB","512GB SSD","GEFORCE RTX3050TI","15-FB0075CL","RYZEN 7 5800H","HP",15.6,"FULL HD","$290.000")
-const hpOmenCk0xxx = new Laptop("HP OMEN","32 GB","1TB SSD","GEFORCE RTX3060","CK0XXX","INTEL CORE I7","HP",17.3,"144HZ","$450.000")
-const msiLeopard10sdk = new Laptop("MSI LEOPARD","16 GB","512GB SSD","GEFORCE GTX166TI","10SDK","INTEL CORE I7 10TH","MSI",17.6,"144HZ","$300.000")
-const msiCrosshairA11uck = new Laptop("MSI CROSSHAIR","32 GB","512GB SSD","GEFORCE RTX3050","A11UCK-646","INTEL CORE I7","MSI",17.3,"FULL HD","$365.000");
-const msiSword15 = new Laptop("MSI SWORD","32 GB","512GB SSD","GEFORCE RTX3050TI","A11UD","INTEL CORE I7","MSI",17.3,"144HZ","$365.000");
-const asusX512ja = new Laptop("ASUS VBGB","20 GB","256GB SSD","INTEL IRIS","X512JA","INTEL CORE I7 1065","ASUS",15.6,"FULL HD","$205.000");
-const asusTufFx70 = new Laptop("ASUS TUF","16 GB","512GB SSD","GEFORCE RTX3050TI","FX706HE","INTEL CORE I5","ASUS",17.3,"144HZ","$270.000");
-const asusZeQ4 = new Laptop("ASUS ZENBOOK","8 GB","256GB SSD","GEFORCE MX450","Q408UG","RYZEN 5 5500U","ASUS",14,"FULL HD","$200.000")
-const dellLatitude73 = new Laptop("DELL LATITUDE","16 GB","512GB SSD","INTEL IRIS","7390","INTEL CORE I7 8TH","DELL",13.3,"FULL HD","$190.000")
-const acerPredator300 = new Laptop("ACER PREDATOR","16 GB","512 GB SSD","GEFORCE RTX3060","HELIOS300","INTEL CORE I7 11800H","ACER",15.6,"FULL HD","$399.000")
-const dellInspiron35 = new Laptop("DELL INSPIRON","16 GB","256GB SSD","INTEL IRIS","3511","INTEL CORE I5 10TH","DELL",15.6,"FULL HD","$180.000")
+const  lenovo17ach6h = new Laptop("LENOVO LEGION 5","32 GB","1TB SSD","GEFORCE RTX3070","17ACH6H","RYZEN 7 5800H","LENOVO",17.3,"FULL HD",480000);
+const lenovo15ach6 = new Laptop("LENOVO LEGION S7","32 GB","1TB SSD","GEFORCE RTX3060","15ACH6","RYZEN 9 5900HX","LENOVO",15.6,"FULL HD",460000);
+const lenovoIdeapad15itl05 = new Laptop("LENOVO IDEAPAD 5","16 GB","512GB SSD","GEFORCE MX450","15ITL05","INTEL CORE I7","LENOVO",15.6,"FULL HD",230000);
+const hp15zef2000 = new Laptop("HP","16 GB","512GB SSD","AMD RADEON","15Z-EF2000","RYZEN 7 5700U","HP",15.6,"FULL HD",200000);
+const hpVictus15fb = new Laptop("HP VICTUS","16 GB","512GB SSD","GEFORCE RTX3050TI","15-FB0075CL","RYZEN 7 5800H","HP",15.6,"FULL HD",290000)
+const hpOmenCk0xxx = new Laptop("HP OMEN","32 GB","1TB SSD","GEFORCE RTX3060","CK0XXX","INTEL CORE I7","HP",17.3,"144HZ",450000)
+const msiLeopard10sdk = new Laptop("MSI LEOPARD","16 GB","512GB SSD","GEFORCE GTX166TI","10SDK","INTEL CORE I7 10TH","MSI",17.6,"144HZ",300000)
+const msiCrosshairA11uck = new Laptop("MSI CROSSHAIR","32 GB","512GB SSD","GEFORCE RTX3050","A11UCK-646","INTEL CORE I7","MSI",17.3,"FULL HD",365000);
+const msiSword15 = new Laptop("MSI SWORD","32 GB","512GB SSD","GEFORCE RTX3050TI","A11UD","INTEL CORE I7","MSI",17.3,"144HZ",365000);
+const asusX512ja = new Laptop("ASUS VBGB","20 GB","256GB SSD","INTEL IRIS","X512JA","INTEL CORE I7 1065","ASUS",15.6,"FULL HD",205000);
+const asusTufFx70 = new Laptop("ASUS TUF","16 GB","512GB SSD","GEFORCE RTX3050TI","FX706HE","INTEL CORE I5","ASUS",17.3,"144HZ",270000);
+const asusZeQ4 = new Laptop("ASUS ZENBOOK","8 GB","256GB SSD","GEFORCE MX450","Q408UG","RYZEN 5 5500U","ASUS",14,"FULL HD",200000)
+const dellLatitude73 = new Laptop("DELL LATITUDE","16 GB","512GB SSD","INTEL IRIS","7390","INTEL CORE I7 8TH","DELL",13.3,"FULL HD",190000)
+const acerPredator300 = new Laptop("ACER PREDATOR","16 GB","512 GB SSD","GEFORCE RTX3060","HELIOS300","INTEL CORE I7 11800H","ACER",15.6,"FULL HD",390000)
+const dellInspiron35 = new Laptop("DELL INSPIRON","16 GB","256GB SSD","INTEL IRIS","3511","INTEL CORE I5 10TH","DELL",15.6,"FULL HD",180000)
 
 let computers = [lenovo15ach6,hp15zef2000,lenovoIdeapad15itl05,lenovo17ach6h,hpVictus15fb,hpOmenCk0xxx,msiLeopard10sdk,msiSword15,asusX512ja,asusTufFx70,asusZeQ4,dellLatitude73,msiCrosshairA11uck,acerPredator300,dellInspiron35];
 let buys = [];
@@ -67,7 +67,7 @@ function listImg(name,list){ //la funcion recibe un nombre y busca en su lista s
     }
     return choose;
 }
-
+let acumulador = 0
 function action(list){
     list.forEach((e)=>{
         const newContainer = document.createElement("DIV");//crear contenedor div que contendra las notebooks
@@ -116,6 +116,16 @@ function action(list){
             let save = JSON.stringify(buys);
             localStorage.setItem("mis compras",save);
             agregar(e);
+            //precio
+            acumulador +=e.price;
+            precio.innerHTML = acumulador;
+            Toastify({
+                text: e.name+e.modelo,
+                offset: {
+                  x: 1160, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                  y: 590 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                },
+              }).showToast();
         });
     });
 }
@@ -125,7 +135,9 @@ function agregar(l){
         const nuevo = document.createElement("DIV");
         nuevo.classList.add("nav__modelo");
         nuevo.innerHTML = `
-            <img class="nav__laptopImg" src="./img/laptop/${l.mark}/${l.modelo}.png">
+            <div class="nav__productImg">
+                <img class="nav__laptopImg" src="./img/laptop/${l.mark}/${l.modelo}.png">
+            </div>
             <p class="nav__parrafoLaptop">${l.name} ${l.modelo}</p>
             <p>${l.price}</p>
             <img class="nav__junk" src="./img/logos/junk.png">
@@ -202,6 +214,7 @@ for(let caption of option){
 let cont = 0;
 const slider = document.querySelector(".header__slider");
 const sliders = document.querySelectorAll(".header__slide");
+const precio = document.querySelector(".nav__total");
 let width = sliders[0].clientWidth;
 
 setInterval(()=>{mover()},3000)
@@ -215,6 +228,13 @@ function mover(){
         slider.style.transform = `translateX(${width*cont}px)`;
     }
 }
+
+function price(precio){
+    let f = precio.toString()
+    return f.length;
+}
+
+console.log(price(120000));
 
 const shopping = document.querySelector(".nav__img");
 const shoppingActive = document.querySelector(".nav__buy");
